@@ -1,28 +1,21 @@
 {
   "name": "hubot-diagnostics",
   "description": "hubot scripts for diagnosing hubot",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": "Josh Nichols <technicalpickles@github.com>",
   "license": "MIT",
-
   "keywords": "hubot, hubot-scripts",
-
   "repository": {
     "type": "git",
     "url": "git://github.com/hubot-scripts/hubot-diagnostics.git"
   },
-
   "bugs": {
     "url": "https://github.com/hubot-scripts/hubot-diagnostics/issues"
   },
-
-  "dependencies": {
-  },
-
+  "dependencies": {},
   "peerDependencies": {
     "hubot": "2.x"
   },
-
   "devDependencies": {
     "hubot": "2.x",
     "mocha": "*",
@@ -34,9 +27,7 @@
     "matchdep": "~0.1.2",
     "grunt-contrib-watch": "~0.5.3"
   },
-
   "main": "index.coffee",
-
   "scripts": {
     "test": "grunt test"
   }
