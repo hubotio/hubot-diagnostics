@@ -13,7 +13,7 @@ describe 'diagnostics', ->
     require('../src/diagnostics')(@robot)
 
   it 'registers a respond listener', ->
-    expect(@robot.respond).to.have.been.calledWith(/hello/)
-
-  it 'registers a hear listener', ->
-    expect(@robot.hear).to.have.been.calledWith(/orly/)
+    expect(@robot.respond).to.have.been.calledWith(/PING$/i)
+    expect(@robot.respond).to.have.been.calledWith(/ADAPTER$/i)
+    expect(@robot.respond).to.have.been.calledWith(/ECHO (.*)$/i)
+    expect(@robot.respond).to.have.been.calledWith(/TIME$/i)
