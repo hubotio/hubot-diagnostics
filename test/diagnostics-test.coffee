@@ -17,3 +17,5 @@ describe 'diagnostics', ->
     expect(@robot.respond).to.have.been.calledWith(/ADAPTER$/i)
     expect(@robot.respond).to.have.been.calledWith(/ECHO (.*)$/i)
     expect(@robot.respond).to.have.been.calledWith(/TIME$/i)
+    expect(@robot.respond).to.have.been.calledWith(/show storage$/i)
+    expect(@robot.respond).to.have.been.calledWith(/show users$/i)
