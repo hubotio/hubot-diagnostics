@@ -2,7 +2,7 @@
 
 hubot scripts for diagnosing hubot
 
-See [`src/diagnostics.coffee`](src/diagnostics.coffee) for full documentation.
+See [`src/diagnostics.js`](src/diagnostics.js) for full documentation.
 
 ## Installation
 
