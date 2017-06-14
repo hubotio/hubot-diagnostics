@@ -17,18 +17,18 @@
     "hubot": ">=2 <10 || 0.0.0-development"
   },
   "devDependencies": {
-    "hubot": "2.x",
+    "hubot": "hubotio/hubot",
+    "hubot-mock-adapter-v3": "~1.0.0",
     "mocha": "*",
     "chai": "*",
     "sinon-chai": "*",
     "sinon": "*",
-    "grunt-mocha-test": "~0.7.0",
-    "grunt-release": "~0.6.0",
-    "matchdep": "~0.1.2",
-    "grunt-contrib-watch": "~0.5.3"
+    "standard": "^10.0.2",
+    "matchdep": "~0.1.2"
   },
-  "main": "index.coffee",
+  "main": "index.js",
   "scripts": {
-    "test": "grunt test"
+    "pretest": "standard",
+    "test": "mocha"
   }
 }
