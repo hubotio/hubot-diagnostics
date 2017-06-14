@@ -13,7 +13,7 @@
     "url": "https://github.com/hubot-scripts/hubot-diagnostics/issues"
   },
   "engines": {
-    "node" : ">4"
+    "node": ">4"
   },
   "dependencies": {},
   "peerDependencies": {
@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "chai": "*",
+    "coveralls": "^2.13.1",
     "hubot": "hubotio/hubot",
     "hubot-mock-adapter-v3": "~1.0.0",
     "matchdep": "~0.1.2",
@@ -33,6 +34,7 @@
   "main": "index.js",
   "scripts": {
     "pretest": "standard",
-    "test": "nyc mocha"
+    "test": "nyc --reporter=html --reporter=text mocha",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
   }
 }

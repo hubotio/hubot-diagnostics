@@ -1,3 +1,5 @@
+[![Coverage Status](https://coveralls.io/repos/github/hubotio/hubot-diagnostics/badge.svg?branch=master)](https://coveralls.io/github/hubotio/hubot-diagnostics?branch=master)
+
 # hubot-diagnostics
 
 hubot scripts for diagnosing hubot
