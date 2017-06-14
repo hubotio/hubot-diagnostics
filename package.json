@@ -17,18 +17,19 @@
     "hubot": ">=2 <10 || 0.0.0-development"
   },
   "devDependencies": {
+    "chai": "*",
     "hubot": "hubotio/hubot",
     "hubot-mock-adapter-v3": "~1.0.0",
+    "matchdep": "~0.1.2",
     "mocha": "*",
-    "chai": "*",
-    "sinon-chai": "*",
+    "nyc": "^11.0.2",
     "sinon": "*",
-    "standard": "^10.0.2",
-    "matchdep": "~0.1.2"
+    "sinon-chai": "*",
+    "standard": "^10.0.2"
   },
   "main": "index.js",
   "scripts": {
     "pretest": "standard",
-    "test": "mocha"
+    "test": "nyc mocha"
   }
 }
