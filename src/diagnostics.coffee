@@ -11,14 +11,14 @@
 #   Josh Nichols <technicalpickles@github.com>
 
 module.exports = (robot) ->
-  robot.respond /PING$/i, (msg) ->
+  robot.respond /PING$/i, id: "diagnostics.ping", (msg) ->
     msg.send "PONG"
 
-  robot.respond /ADAPTER$/i, (msg) ->
+  robot.respond /ADAPTER$/i, id: "diagnostics.adapter", (msg) ->
     msg.send robot.adapterName
 
-  robot.respond /ECHO (.*)$/i, (msg) ->
+  robot.respond /ECHO (.*)$/i, id: "diagnostics.echo", (msg) ->
     msg.send msg.match[1]
 
-  robot.respond /TIME$/i, (msg) ->
+  robot.respond /TIME$/i, id: "diagnostics.time", (msg) ->
     msg.send "Server time is: #{new Date()}"
