@@ -2,6 +2,9 @@
   "name": "hubot-diagnostics",
   "description": "hubot scripts for diagnosing hubot",
   "version": "0.0.0-development",
+  "publishConfig": {
+    "tag": "next"
+  },
   "author": "Josh Nichols <technicalpickles@github.com>",
   "license": "MIT",
   "keywords": "hubot, hubot-scripts",
