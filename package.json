@@ -22,7 +22,7 @@
   "devDependencies": {
     "chai": "*",
     "coveralls": "^2.13.1",
-    "hubot": "hubotio/hubot",
+    "hubot": "^3.0.0",
     "hubot-mock-adapter-v3": "~1.0.0",
     "matchdep": "~0.1.2",
     "mocha": "*",
