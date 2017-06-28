@@ -17,7 +17,7 @@ const newTestRobot = function newTestRobot () {
   process.env.PORT = '0'
   const robot = new Robot(null, 'mock-adapter-v3', true, 'hubot')
 
-  robot.loadFile(path.resolve('src/'), 'diagnostics')
+  robot.loadFile(path.resolve('src/'), 'diagnostics.js')
 
   robot.adapter.on('connected', () => robot.brain.userForId('1', {
     name: 'john',
