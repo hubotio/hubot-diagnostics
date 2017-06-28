@@ -23,15 +23,15 @@
     "hubot": ">=2 <10 || 0.0.0-development"
   },
   "devDependencies": {
-    "chai": "*",
+    "chai": "^4.0.2",
     "coveralls": "^2.13.1",
     "hubot": "^3.0.0",
-    "hubot-mock-adapter-v3": "~1.0.0",
-    "matchdep": "~0.1.2",
-    "mocha": "*",
+    "hubot-mock-adapter-v3": "^1.0.0",
+    "matchdep": "^0.1.2",
+    "mocha": "^3.4.2",
     "nyc": "^11.0.2",
-    "sinon": "*",
-    "sinon-chai": "*",
+    "sinon": "^2.3.6",
+    "sinon-chai": "^2.11.0",
     "standard": "^10.0.2",
     "semantic-release": "^6.3.6"
   },
