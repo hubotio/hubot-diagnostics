@@ -1,8 +1,10 @@
+[![Build Status](https://travis-ci.org/hubotio/hubot-diagnostics.svg?branch=master)](https://travis-ci.org/hubotio/hubot-diagnostics) [![Coverage Status](https://coveralls.io/repos/github/hubotio/hubot-diagnostics/badge.svg?branch=master)](https://coveralls.io/github/hubotio/hubot-diagnostics?branch=master)
+
 # hubot-diagnostics
 
 hubot scripts for diagnosing hubot
 
-See [`src/diagnostics.coffee`](src/diagnostics.coffee) for full documentation.
+See [`src/diagnostics.js`](src/diagnostics.js) for full documentation.
 
 ## Installation
 
