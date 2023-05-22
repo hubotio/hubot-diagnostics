@@ -21,28 +21,20 @@
   "engines": {
     "node": "> 4.0.0"
   },
-  "dependencies": {},
-  "peerDependencies": {
-    "hubot": ">=2 <10 || 0.0.0-development"
-  },
-  "devDependencies": {
-    "chai": "^4.0.2",
-    "coveralls": "^2.13.1",
-    "hubot": "^3.0.0",
-    "hubot-mock-adapter-v3": "^1.0.0",
-    "matchdep": "^0.1.2",
-    "mocha": "^3.4.2",
-    "nyc": "^11.0.2",
-    "sinon": "^2.3.6",
-    "sinon-chai": "^2.11.0",
-    "standard": "^10.0.2",
-    "semantic-release": "^6.3.6"
-  },
   "main": "index.js",
   "scripts": {
     "pretest": "standard",
-    "test": "nyc --reporter=html --reporter=text mocha",
-    "coverage": "nyc report --reporter=text-lcov | coveralls",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "test": "mocha --exit"
+  },
+  "dependencies": {
+    "chai": "^4.3.7",
+    "hubot": "^4.0.0",
+    "hubot-mock-adapter-v3": "^1.0.1",
+    "matchdep": "^2.0.0",
+    "mocha": "^10.2.0",
+    "semantic-release": "^21.0.2",
+    "sinon": "^15.1.0",
+    "sinon-chai": "^3.7.0",
+    "standard": "^17.0.0"
   }
 }
