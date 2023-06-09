@@ -88,4 +88,15 @@ describe('diagnostics', () => describe('respond to diagnostic commands', () => {
     })
     return this.robot.adapter.receive(new TextMessage(this.user, 'hubot time'))
   }))
+
+  context('when asked to echo a multiline string', () => it('echoes the multiline string', function (done) {
+    this.robot.adapter.on('send', function (envelope, strings) {
+      expect(strings.length).to.eql(1)
+      expect(strings[0]).to.eql('horses are weird\nviolets are blue')
+
+      return done()
+    })
+
+    return this.robot.adapter.receive(new TextMessage(this.user, 'hubot echo horses are weird\nviolets are blue'))
+  }))
 }))
