@@ -20,8 +20,7 @@ module.exports = function (robot) {
   robot.respond(/ADAPTER$/i, msg => {
     msg.send(robot.adapterName)
   })
-
-  robot.respond(/ECHO (.*)$/i, msg => {
+  robot.respond(/ECHO ([\s\S]*)$/im, msg => {
     msg.send(msg.match[1])
   })
 
