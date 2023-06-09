@@ -34,5 +34,11 @@
     "sinon": "^15.1.0",
     "sinon-chai": "^3.7.0",
     "standard": "^17.1.0"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "dryRun": false
   }
 }
