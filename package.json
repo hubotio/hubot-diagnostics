@@ -2,9 +2,6 @@
   "name": "hubot-diagnostics",
   "description": "hubot scripts for diagnosing hubot",
   "version": "0.0.0-development",
-  "publishConfig": {
-    "tag": "next"
-  },
   "author": "Josh Nichols <technicalpickles@github.com>",
   "license": "MIT",
   "keywords": [
@@ -27,14 +24,15 @@
     "test": "mocha --exit"
   },
   "dependencies": {
+    "hubot": "^4.0.0"
+  },
+  "devDependencies": {
     "chai": "^4.3.7",
-    "hubot": "^4.0.0",
-    "hubot-mock-adapter-v3": "^1.0.1",
-    "matchdep": "^2.0.0",
     "mocha": "^10.2.0",
-    "semantic-release": "^21.0.2",
+    "mockery": "^2.1.0",
+    "semantic-release": "^21.0.3",
     "sinon": "^15.1.0",
     "sinon-chai": "^3.7.0",
-    "standard": "^17.0.0"
+    "standard": "^17.1.0"
   }
 }
