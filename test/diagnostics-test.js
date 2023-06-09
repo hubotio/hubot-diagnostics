@@ -5,6 +5,7 @@
 const path = require('path')
 
 const chai = require('chai')
+const mockery = require('mockery')
 const Hubot = require('hubot')
 
 const expect = chai.expect
@@ -15,7 +16,7 @@ chai.use(require('sinon-chai'))
 
 const newTestRobot = function newTestRobot () {
   process.env.PORT = '0'
-  const robot = new Robot(null, 'mock-adapter-v3', true, 'hubot')
+  const robot = new Robot(null, 'mock-adapter', true, 'hubot')
 
   robot.loadFile(path.resolve('src/'), 'diagnostics.js')
 
@@ -30,6 +31,11 @@ const newTestRobot = function newTestRobot () {
 
 describe('diagnostics', () => describe('respond to diagnostic commands', () => {
   beforeEach(function () {
+    mockery.enable({
+      warnOnReplace: false,
+      warnOnUnregistered: false
+    })
+    mockery.registerMock('hubot-mock-adapter', require('./fixtures/MockAdapter.js'))
     this.robot = newTestRobot()
     this.robot.run()
     this.user = this.robot.brain.userForName('john')
@@ -37,6 +43,7 @@ describe('diagnostics', () => describe('respond to diagnostic commands', () => {
 
   afterEach(function () {
     this.robot.shutdown()
+    mockery.disable()
   })
 
   context('when sent a ping', () => it('hubot pongs', function (done) {
@@ -50,10 +57,10 @@ describe('diagnostics', () => describe('respond to diagnostic commands', () => {
     return this.robot.adapter.receive(new TextMessage(this.user, 'hubot ping'))
   }))
 
-  context('when asked for adapter', () => it('responds with mock-adapter-v3', function (done) {
+  context('when asked for adapter', () => it('responds with mock-adapter', function (done) {
     this.robot.adapter.on('send', function (envelope, strings) {
       expect(strings.length).to.eql(1)
-      expect(strings[0]).to.eql('mock-adapter-v3')
+      expect(strings[0]).to.eql('mock-adapter')
 
       return done()
     })
