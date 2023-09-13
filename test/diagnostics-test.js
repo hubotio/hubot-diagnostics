@@ -5,7 +5,7 @@
 const path = require('path')
 
 const chai = require('chai')
-const mockery = require('mockery')
+const { hook, reset } = require('./fixtures/RequireMocker.js')
 const Hubot = require('hubot')
 
 const expect = chai.expect
@@ -31,11 +31,7 @@ const newTestRobot = function newTestRobot () {
 
 describe('diagnostics', () => describe('respond to diagnostic commands', () => {
   beforeEach(function () {
-    mockery.enable({
-      warnOnReplace: false,
-      warnOnUnregistered: false
-    })
-    mockery.registerMock('hubot-mock-adapter', require('./fixtures/MockAdapter.js'))
+    hook('hubot-mock-adapter', require('./fixtures/MockAdapter.js'))
     this.robot = newTestRobot()
     this.robot.run()
     this.user = this.robot.brain.userForName('john')
@@ -43,7 +39,7 @@ describe('diagnostics', () => describe('respond to diagnostic commands', () => {
 
   afterEach(function () {
     this.robot.shutdown()
-    mockery.disable()
+    reset()
   })
 
   context('when sent a ping', () => it('hubot pongs', function (done) {
