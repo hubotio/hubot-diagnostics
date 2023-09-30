@@ -16,22 +16,18 @@
     "url": "https://github.com/hubotio/hubot-diagnostics/issues"
   },
   "engines": {
-    "node": "> 4.0.0"
+    "node": "> 18.x"
   },
   "main": "index.js",
   "scripts": {
     "pretest": "standard",
-    "test": "mocha --exit"
+    "test": "node --test"
   },
-  "dependencies": {
-    "hubot": "^4.0.0"
+  "peerDependencies": {
+    "hubot": ">= 9"
   },
   "devDependencies": {
-    "chai": "^4.3.7",
-    "mocha": "^10.2.0",
     "semantic-release": "^21.0.3",
-    "sinon": "^15.1.0",
-    "sinon-chai": "^3.7.0",
     "standard": "^17.1.0"
   },
   "release": {
