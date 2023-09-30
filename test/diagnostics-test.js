@@ -2,7 +2,7 @@
 
 const { describe, it, beforeEach, afterEach } = require('node:test')
 const path = require('path')
-const assert = require('assert')
+const assert = require('node:assert/strict')
 const Hubot = require('hubot')
 
 const Robot = Hubot.Robot
