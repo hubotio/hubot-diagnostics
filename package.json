@@ -19,6 +19,10 @@
     "node": "> 18.x"
   },
   "main": "index.js",
+  "files": [
+    "index.js",
+    "src"
+  ],
   "scripts": {
     "pretest": "standard",
     "test": "node --test"
@@ -27,7 +31,6 @@
     "hubot": ">= 9"
   },
   "devDependencies": {
-    "semantic-release": "^21.0.3",
     "standard": "^17.1.0"
   },
   "release": {
