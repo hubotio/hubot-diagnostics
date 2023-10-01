@@ -1,4 +1,4 @@
-![Build Status](https://github.com/hubotio/hubot-diagnostics/actions/workflows/release.yml/badge.svg)
+![Build Status](https://github.com/hubotio/hubot-diagnostics/actions/workflows/pipeline.yml/badge.svg)
 
 # hubot-diagnostics
 
