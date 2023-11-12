@@ -13,18 +13,18 @@
 //   Josh Nichols <technicalpickles@github.com>
 
 module.exports = function (robot) {
-  robot.respond(/PING$/i, msg => {
-    msg.send('PONG')
+  robot.respond(/PING$/i, async msg => {
+    await msg.send('PONG')
   })
 
-  robot.respond(/ADAPTER$/i, msg => {
-    msg.send(robot.adapterName)
+  robot.respond(/ADAPTER$/i, async msg => {
+    await msg.send(robot.adapterName)
   })
-  robot.respond(/ECHO ([\s\S]*)$/im, msg => {
-    msg.send(msg.match[1])
+  robot.respond(/ECHO ([\s\S]*)$/im, async msg => {
+    await msg.send(msg.match[1])
   })
 
-  robot.respond(/TIME$/i, msg => {
-    msg.send(`Server time is: ${new Date()}`)
+  robot.respond(/TIME$/i, async msg => {
+    await msg.send(`Server time is: ${new Date()}`)
   })
 }
