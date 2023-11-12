@@ -16,7 +16,7 @@
     "url": "https://github.com/hubotio/hubot-diagnostics/issues"
   },
   "engines": {
-    "node": "> 18.x"
+    "node": ">= 18"
   },
   "main": "index.js",
   "files": [
