@@ -1,8 +1,12 @@
 'use strict'
 
-const Adapter = require('hubot/src/adapter.js')
+const { Adapter } = require('hubot')
 
 class MockAdapter extends Adapter {
+  get name () {
+    return 'mock-adapter'
+  }
+
   async send (envelope, ...strings) {
     this.emit('send', envelope, strings)
   }

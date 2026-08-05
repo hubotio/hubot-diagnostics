@@ -28,15 +28,15 @@
     "test": "node --test"
   },
   "peerDependencies": {
-    "hubot": ">= 9 || 0.0.0-development"
-  },
-  "devDependencies": {
-    "standard": "^17.1.0"
+    "hubot": ">= 14 || 0.0.0-development"
   },
   "release": {
     "branches": [
       "main"
     ],
     "dryRun": false
+  },
+  "devDependencies": {
+    "standard": "^17.1.2"
   }
 }
